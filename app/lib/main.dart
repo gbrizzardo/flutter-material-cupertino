@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:app/custom_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -49,16 +52,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Examples Widget to Android and iOS via code',
               ),
             ),
-            const Text('Android'),
+            const Text('Android - Material'),
             // Android
             Slider(value: 10, onChanged: (value) {}, max: 20, min: 0),
             // ios
-            const Text('iOS'),
+            const Text('iOS - Cupertino'),
             CupertinoSlider(value: 10, onChanged: (value) {}, max: 20, min: 0),
             // Android E iOS
-            const Text('iOS'),
+            Text('Adapted to: ${Platform.operatingSystem.toUpperCase()}'),
             // add ADAPTIVE in Widget, to adapt on 2 platforms
-            Slider.adaptive(value: 10, onChanged: (value) {}, max: 20, min: 0)
+            Slider.adaptive(value: 10, onChanged: (value) {}, max: 20, min: 0),
+
+            const Padding(
+              padding: EdgeInsets.only(top: 32),
+              child: Text(
+                'Custom Slider',
+              ),
+            ),
+            // Slider to Platform
+            CustomSlider()
           ],
         ),
       ),
