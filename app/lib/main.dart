@@ -52,11 +52,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 'Examples Widget to Android and iOS via code',
               ),
             ),
-            const Text('Android - Material'),
+            const Text('Android -Material'),
             // Android
             Slider(value: 10, onChanged: (value) {}, max: 20, min: 0),
             // ios
-            const Text('iOS - Cupertino'),
+            const Text('iOS -Cupertino'),
             CupertinoSlider(value: 10, onChanged: (value) {}, max: 20, min: 0),
             // Android E iOS
             Text('Adapted to: ${Platform.operatingSystem.toUpperCase()}'),
